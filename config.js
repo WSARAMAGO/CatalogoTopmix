@@ -58,10 +58,10 @@ var SITE_CONFIG = {
   // como opção de enviar orçamento (ex: financeiro, suporte).
   // Deixe vazio ("") o que não quiser mostrar -- o rodapé se ajusta sozinho.
   rodape: {
-    endereco: "",
-    instagram: "",       // ex: "https://instagram.com/suaempresa"
+    endereco: "Rua Mercurio, 504 - Bairro Jardim Brasilia - Uberlândia-MG",
+    instagram: "https://www.instagram.com/topmixudi/",       // ex: "https://instagram.com/suaempresa"
     facebook: "",        // ex: "https://facebook.com/suaempresa"
-    googleMaps: "",       // ex: link da página do Google (Google Maps ou Google Meu Negócio)
+    googleMaps: "https://share.google/Tn62WMBWOYkfYb0w2",       // ex: link da página do Google (Google Maps ou Google Meu Negócio)
     contatosExtras: [
       { nome: "Financeiro", numero: "5534988270835" }
     ]
