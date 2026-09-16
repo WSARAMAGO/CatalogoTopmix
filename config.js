@@ -58,10 +58,10 @@ var SITE_CONFIG = {
   // como opção de enviar orçamento (ex: financeiro, suporte).
   // Deixe vazio ("") o que não quiser mostrar -- o rodapé se ajusta sozinho.
   rodape: {
-    endereco: "",
-    instagram: "",       // ex: "https://instagram.com/suaempresa"
+    endereco: "R. Mercúrio, 504 - Jardim Brasília, Uberlândia - MG, 38401-420",
+    instagram: "https://www.instagram.com/topmixudi/",       // ex: "https://instagram.com/suaempresa"
     facebook: "",        // ex: "https://facebook.com/suaempresa"
-    googleMaps: "",       // ex: link da página do Google (Google Maps ou Google Meu Negócio)
+    googleMaps: "https://share.google/ChQj8z5DSs92iiOmH",       // ex: link da página do Google (Google Maps ou Google Meu Negócio)
     contatosExtras: [
       { nome: "Financeiro", numero: "5534988270835" }
     ]
@@ -71,7 +71,7 @@ var SITE_CONFIG = {
   creditos: "Catálogo desenvolvido por WSARAMAGO",
   // Se preencher um link aqui (WhatsApp, Instagram etc.), a assinatura acima
   // vira um link clicável. Deixe "" para aparecer só como texto.
-  creditosLink: "",
+  creditosLink: "https://wa.me/message/A7BOFCT2SGZOH1",
 
   // Trava simples de acesso ao admin.html (NÃO é segurança de verdade --
   // é só pra evitar que alguém que ache o link mexa sem querer no painel.
