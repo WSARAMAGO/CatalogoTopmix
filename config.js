@@ -61,7 +61,7 @@ var SITE_CONFIG = {
     endereco: "R. Mercúrio, 504 - Jardim Brasília, Uberlândia - MG, 38401-420",
     instagram: "https://www.instagram.com/topmixudi/",       // ex: "https://instagram.com/suaempresa"
     facebook: "",        // ex: "https://facebook.com/suaempresa"
-    googleMaps: "https://share.google/ChQj8z5DSs92iiOmH",       // ex: link da página do Google (Google Maps ou Google Meu Negócio)
+    googleMaps: "https://share.google/2BgpoZiYL798hvad3",       // ex: link da página do Google (Google Maps ou Google Meu Negócio)
     contatosExtras: [
       { nome: "Financeiro", numero: "5534988270835" }
     ]
@@ -76,7 +76,7 @@ var SITE_CONFIG = {
   // Trava simples de acesso ao admin.html (NÃO é segurança de verdade --
   // é só pra evitar que alguém que ache o link mexa sem querer no painel.
   // Deixe "" pra não pedir senha nenhuma.
-  senhaAdmin: "",
+  senhaAdmin: "200126",
 
   // ID do Google Analytics (formato "G-XXXXXXXXXX"). Deixe "" pra não
   // ativar nenhum rastreamento. Com o ID preenchido, o catálogo passa a

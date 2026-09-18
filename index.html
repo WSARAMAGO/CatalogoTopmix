@@ -124,33 +124,43 @@
   .barra-busca-wrap{
     position:sticky;top:0;z-index:80;
     background:var(--gray-100);
-    padding:.75rem 1rem;
+    padding:.55rem 1rem;
     border-bottom:1px solid var(--gray-200);
   }
-  .barra-busca{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:.4rem;}
+  .barra-busca{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:.35rem;}
   .campo-busca{position:relative;}
-  .campo-busca span{position:absolute;left:.9rem;top:50%;transform:translateY(-50%);font-size:1rem;opacity:.6;pointer-events:none;}
+  .campo-busca span{position:absolute;left:.8rem;top:50%;transform:translateY(-50%);font-size:.9rem;opacity:.6;pointer-events:none;}
   #campo-pesquisa{
-    width:100%;padding:.8rem 1rem .8rem 2.4rem;font-size:1rem;
+    width:100%;padding:.6rem .9rem .6rem 2.2rem;font-size:.9rem;
     border:1.5px solid var(--gray-200);border-radius:8px;outline:none;
     background:var(--white);color:var(--navy-800);
     -webkit-appearance:none;
   }
   #campo-pesquisa:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,128,26,.15);}
   #filtro-categoria{
-    width:100%;padding:.6rem .8rem;font-size:.88rem;font-weight:600;color:var(--navy-800);
+    width:100%;padding:.5rem .7rem;font-size:.82rem;font-weight:600;color:var(--navy-800);
     border:1.5px solid var(--gray-200);border-radius:8px;background:var(--white);outline:none;
   }
   #filtro-categoria:focus{border-color:var(--orange);}
+  .linha-categoria-carrinho{display:flex;align-items:center;gap:.5rem;}
+  .linha-categoria-carrinho #filtro-categoria{flex:1;}
   .linha-info{display:flex;align-items:center;justify-content:space-between;gap:.5rem;}
-  .contador{font-size:.82rem;color:var(--navy-600);font-weight:600;padding-left:.15rem;}
+  .contador{font-size:.78rem;color:var(--navy-600);font-weight:600;padding-left:.15rem;}
   .btn-pdf{
     background:var(--white);color:var(--navy-800);border:1.5px solid var(--gray-200);
-    padding:.4rem .75rem;border-radius:7px;font-size:.78rem;font-weight:700;
+    padding:.35rem .65rem;border-radius:7px;font-size:.74rem;font-weight:700;
     cursor:pointer;white-space:nowrap;flex-shrink:0;
   }
   .btn-pdf:hover{border-color:var(--orange);}
   .btn-pdf:disabled{opacity:.6;cursor:wait;}
+
+  @media (min-width:640px){
+    .barra-busca{flex-direction:row;flex-wrap:wrap;align-items:center;}
+    .campo-busca{flex:1 1 260px;}
+    .linha-categoria-carrinho{flex:0 0 auto;}
+    .linha-categoria-carrinho #filtro-categoria{width:210px;flex:0 0 210px;}
+    .linha-info{flex:1 1 100%;}
+  }
 
   main.grid{
     max-width:1200px;margin:1.25rem auto 0;padding:0 1rem;
@@ -239,17 +249,17 @@
   .barra-carrinho{display:none;}
 
   .carrinho-flutuante{
-    position:fixed;top:1rem;right:1rem;z-index:150;
-    width:52px;height:52px;border-radius:50%;border:none;
+    position:relative;flex-shrink:0;
+    width:44px;height:44px;border-radius:50%;border:none;
     background:var(--navy-900);color:var(--white);
-    display:flex;align-items:center;justify-content:center;font-size:1.4rem;
-    box-shadow:var(--shadow-md);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+    box-shadow:var(--shadow-sm);cursor:pointer;
   }
   .carrinho-flutuante:hover{filter:brightness(1.15);}
   .carrinho-badge{
-    position:absolute;top:-3px;right:-3px;min-width:20px;height:20px;padding:0 4px;
+    position:absolute;top:-3px;right:-3px;min-width:18px;height:18px;padding:0 4px;
     background:var(--orange);color:var(--navy-900);border-radius:999px;
-    font-size:.68rem;font-weight:800;display:flex;align-items:center;justify-content:center;
+    font-size:.65rem;font-weight:800;display:flex;align-items:center;justify-content:center;
     border:2px solid var(--white);
   }
 
@@ -311,14 +321,14 @@
     .pagina-foto-cheia{page-break-after:always;text-align:center;}
     .pagina-foto-cheia.contracapa{page-break-before:always;page-break-after:auto;}
     .pagina-foto-cheia img{width:100%;height:auto;display:block;}
-    .lista-pdf{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;padding:0 6mm;}
-    .item-pdf{display:flex;gap:.5rem;align-items:center;border-bottom:1px solid var(--gray-200);padding:.3rem 0;break-inside:avoid;width:47%;}
-    .item-pdf img{width:42px;height:42px;object-fit:contain;border:1px solid var(--gray-200);flex-shrink:0;}
+    .lista-pdf{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;padding:0 6mm;}
+    .item-pdf{display:flex;gap:.7rem;align-items:center;border-bottom:1px solid var(--gray-200);padding:.4rem 0;break-inside:avoid;width:47%;}
+    .item-pdf img{width:72px;height:72px;object-fit:contain;border:1px solid var(--gray-200);flex-shrink:0;}
     .item-pdf .sem-foto{
-      width:42px;height:42px;border:1px solid var(--gray-200);flex-shrink:0;
-      display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--gray-400);
+      width:72px;height:72px;border:1px solid var(--gray-200);flex-shrink:0;
+      display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--gray-400);
     }
-    .item-pdf .txt{font-size:.68rem;line-height:1.25;}
+    .item-pdf .txt{font-size:.74rem;line-height:1.3;}
     .item-pdf .cod{font-weight:700;}
     .item-pdf .preco-pdf{font-weight:700;color:var(--navy-900);}
     .item-pdf .preco-pdf .antigo{font-weight:400;color:var(--navy-600);text-decoration:line-through;margin-right:.3em;}
@@ -367,9 +377,14 @@
       <span aria-hidden="true">🔍</span>
       <input type="search" id="campo-pesquisa" placeholder="Buscar por código ou descrição do produto..." aria-label="Buscar produto" autocomplete="off">
     </div>
-    <select id="filtro-categoria" aria-label="Filtrar por categoria">
-      <option value="">Todas as categorias</option>
-    </select>
+    <div class="linha-categoria-carrinho">
+      <select id="filtro-categoria" aria-label="Filtrar por categoria">
+        <option value="">Todas as categorias</option>
+      </select>
+      <button class="carrinho-flutuante" id="carrinho-flutuante" aria-label="Ver orçamento">
+        🛒<span class="carrinho-badge" id="carrinho-badge" style="display:none;">0</span>
+      </button>
+    </div>
     <div class="linha-info">
       <span id="contador-busca" class="contador"></span>
       <button class="btn-pdf" id="btn-pdf" title="Gerar o catálogo completo em PDF">🖨️ PDF do catálogo</button>
@@ -381,10 +396,6 @@
 <div class="sentinela" id="sentinela"></div>
 
 <button class="btn-topo" id="btn-topo" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
-
-<button class="carrinho-flutuante" id="carrinho-flutuante" aria-label="Ver orçamento">
-  🛒<span class="carrinho-badge" id="carrinho-badge" style="display:none;">0</span>
-</button>
 
 <div class="mensagem-flutuante" id="mensagem-flutuante" role="status" aria-live="polite"></div>
 
@@ -672,12 +683,36 @@
     }
   }
 
+  // Palavras de ligação que o cliente digita naturalmente, mas que quase
+  // nunca aparecem na descrição do produto (ex: "lixa PARA hookit" -- a
+  // descrição real provavelmente não tem a palavra "para"). Ignorá-las evita
+  // que uma preposição sozinha trave a busca inteira.
+  var PALAVRAS_IGNORADAS_BUSCA = new Set([
+    "de", "da", "do", "das", "dos", "para", "pra", "com", "sem", "em",
+    "e", "ou", "a", "o", "as", "os", "um", "uma", "uns", "umas",
+    "no", "na", "nos", "nas", "ao", "aos", "à", "às"
+  ]);
+
   function filtrarEProduzir() {
     var termoOriginal = campoPesquisa.value.trim();
     var termo = normalizar(termoOriginal);
+    var todasPalavras = termo.split(/\s+/).filter(Boolean);
+    var palavrasBusca = todasPalavras.filter(function (p) { return !PALAVRAS_IGNORADAS_BUSCA.has(p); });
+    // Se sobrar só palavra de ligação (ex: buscou só "para"), usa como digitado
+    // mesmo, pra busca não virar "mostrar tudo" sem o cliente esperar isso.
+    if (!palavrasBusca.length) palavrasBusca = todasPalavras;
     var categoria = filtroCategoria.value;
     listaFiltrada = PRODUTOS.filter(function (p) {
-      var passaTexto = !termo || String(p[0]).indexOf(termo) !== -1 || normalizar(p[1]).indexOf(termo) !== -1;
+      var descNorm = normalizar(p[1]);
+      var codNorm = String(p[0]);
+      // Cada palavra (que não seja de ligação) precisa aparecer em algum
+      // lugar (código ou descrição), mas não precisa ser na ordem digitada
+      // nem uma coladinha na outra -- assim "flap cgw" encontra
+      // "DISCO FLAP FIBRA CGW 180MM", e "lixa para hookit" encontra uma
+      // descrição que só tem "lixa" e "hookit", sem a palavra "para".
+      var passaTexto = palavrasBusca.every(function (palavra) {
+        return codNorm.indexOf(palavra) !== -1 || descNorm.indexOf(palavra) !== -1;
+      });
       var passaCategoria = !categoria || CATEGORIA_MAP.get(String(p[0])) === categoria;
       return passaTexto && passaCategoria;
     });
@@ -1075,6 +1110,17 @@
     var cfg = (typeof SITE_CONFIG !== "undefined") ? SITE_CONFIG : {};
     var promessas = [];
 
+    // Mostra o progresso no próprio botão enquanto as fotos carregam --
+    // catálogos grandes (muitas fotos) demoram mais, e assim o lojista vê
+    // que está funcionando, não travado.
+    var progressoFotos = { feitos: 0, total: 0 };
+    function registrarProgressoFoto() {
+      progressoFotos.feitos++;
+      if (progressoFotos.total > 20) {
+        btnPdf.textContent = "Preparando PDF... (" + progressoFotos.feitos + "/" + progressoFotos.total + ")";
+      }
+    }
+
     // Capa: usa a foto configurada em SITE_CONFIG.capaPdf.imagemCapa se ela
     // existir na pasta img/. Se não existir (ainda não foi colocada lá),
     // cai automaticamente na capa de texto (logo + título) como antes.
@@ -1102,10 +1148,11 @@
       var imgCapa = document.createElement("img");
       imgCapa.alt = "";
       promessas.push(new Promise(function (resolve) {
-        imgCapa.addEventListener("load", function () { resolve(); });
+        imgCapa.addEventListener("load", function () { registrarProgressoFoto(); resolve(); });
         imgCapa.addEventListener("error", function () {
           capaFotoDiv.remove();
           areaImpressao.insertBefore(criarCapaTexto(), areaImpressao.firstChild);
+          registrarProgressoFoto();
           resolve();
         });
         imgCapa.src = cfg.capaPdf.imagemCapa;
@@ -1157,8 +1204,8 @@
         semFoto.textContent = "🧰";
 
         promessas.push(new Promise(function (resolve) {
-          img.addEventListener("load", function () { semFoto.remove(); resolve(); });
-          img.addEventListener("error", function () { img.remove(); resolve(); });
+          img.addEventListener("load", function () { semFoto.remove(); registrarProgressoFoto(); resolve(); });
+          img.addEventListener("error", function () { img.remove(); registrarProgressoFoto(); resolve(); });
           img.src = "img/" + p[0] + ".jpg";
         }));
 
@@ -1197,15 +1244,21 @@
       var imgContra = document.createElement("img");
       imgContra.alt = "";
       promessas.push(new Promise(function (resolve) {
-        imgContra.addEventListener("load", function () { resolve(); });
-        imgContra.addEventListener("error", function () { contracapaDiv.remove(); resolve(); });
+        imgContra.addEventListener("load", function () { registrarProgressoFoto(); resolve(); });
+        imgContra.addEventListener("error", function () { contracapaDiv.remove(); registrarProgressoFoto(); resolve(); });
         imgContra.src = cfg.capaPdf.imagemContracapa;
       }));
       contracapaDiv.appendChild(imgContra);
       areaImpressao.appendChild(contracapaDiv);
     }
 
-    var tempoLimite = new Promise(function (resolve) { setTimeout(resolve, 8000); });
+    // O tempo de espera cresce com a quantidade de fotos -- um catálogo com
+    // centenas de produtos precisa de bem mais tempo pra carregar tudo do
+    // que um com poucos itens. Sem isso, fotos que ainda estavam carregando
+    // corriam risco de aparecer como "sem foto" no PDF só por causa do tempo.
+    progressoFotos.total = promessas.length;
+    var tempoLimiteMs = Math.min(45000, Math.max(8000, 4000 + progressoFotos.total * 40));
+    var tempoLimite = new Promise(function (resolve) { setTimeout(resolve, tempoLimiteMs); });
     Promise.race([Promise.all(promessas), tempoLimite]).then(function () {
       btnPdf.textContent = textoOriginal;
       btnPdf.disabled = false;
